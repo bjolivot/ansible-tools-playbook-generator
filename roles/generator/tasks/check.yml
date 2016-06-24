@@ -1,0 +1,17 @@
+---
+- name: Check new_playbook_name var
+  debug: msg="Cheking {{ new_playbook_name | mandatory  }} "
+  tags: check
+
+- name: Check new_playbook_path var
+  debug: msg="Checking {{ new_playbook_path | mandatory  }} "
+  tags: check
+
+- name: check "{{new_playbook_path}}/{{new_playbook_name}}" directory exists
+  stat: path="{{new_playbook_path}}/{{new_playbook_name}}"
+  register: p
+  tags: check
+
+- fail: msg="Path {{new_playbook_path}}/{{new_playbook_name}} allready exists, start playbook with override=true extra arg"
+  when: p.stat.isdir is defined and override==false
+  tags: check

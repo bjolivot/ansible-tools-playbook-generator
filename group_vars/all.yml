@@ -1,0 +1,17 @@
+#
+# where do you want to put you
+new_playbook_path: "~/ansible/playbooks"
+
+# put here copyright infos
+#
+new_playbook_creator: "Benjamin JOLIVOT"
+new_playbook_year:  "{{ ansible_date_time.year }}"
+
+new_role_company: "oscaro"
+
+new_playbook_description: "{{ new_playbook_name }}"
+
+# override existing playbook
+override: false
+
+cfg_role_path: "~/ansible/roles"

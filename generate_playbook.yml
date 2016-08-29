@@ -1,7 +1,7 @@
 - name: generate playbook
   hosts: localhost
   roles:
-    - { role: generator }
+    - { role: playbook_generator }
 
 
 

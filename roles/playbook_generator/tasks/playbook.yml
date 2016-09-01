@@ -9,7 +9,7 @@
   template: src=LICENSE.j2 dest="{{ new_playbook_path }}/{{new_playbook_name}}/LICENSE"
 
 - name: add README file
-  template: src=README.j2 dest="{{ new_playbook_path }}/{{new_playbook_name}}/README"
+  template: src=README.j2 dest="{{ new_playbook_path }}/{{new_playbook_name}}/README.md"
 
 - name: add ansible.cfg
   template: src=ansible.cfg.j2 dest="{{ new_playbook_path }}/{{new_playbook_name}}/ansible.cfg"

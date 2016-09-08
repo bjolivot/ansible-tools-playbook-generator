@@ -1,0 +1,32 @@
+---
+#playbook sample
+
+##### load env specific vars (use -e for cli defined env)
+# - name: load environment
+#   hosts: localhost
+#   tasks:
+#     - name: load "{{ env }}" settings
+#       include_vars: "group_vars/{{ env |mandatory}}.yml"
+
+
+##### Start vm creation
+
+# - name: Setup
+#   become: yes
+#   hosts: localhost
+#   roles:
+#     - { role: gce_vm_manager, tags: "vm"}
+
+
+#### exec roles
+
+# - name: Install all 
+#   become: yes
+#   hosts: myhost
+#   roles:
+#     - working-env
+#     - install-java
+#     - gs-downloader
+#     - configure_varys
+#     - supervisor
+

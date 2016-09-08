@@ -6,10 +6,11 @@ display_usage() {
     } 
 
 
-if [  $# != 1 ] 
+if [  $# < 1 ] 
 then 
     display_usage
     exit 1
 fi 
 
 ansible-playbook generate_playbook.yml -e "new_playbook_name=$1"
+

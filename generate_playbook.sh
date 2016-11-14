@@ -6,7 +6,7 @@ display_usage() {
     } 
 
 
-if [  $# < 1 ] 
+if [  $# != 1 ] 
 then 
     display_usage
     exit 1
